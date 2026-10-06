@@ -1,26 +1,18 @@
 [
   {
-    "title": "Landing Page",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ad quasi quod accusamus iste odit dicta deleniti inventore maxime deserunt!",
+    "title": "Dashboard Guru BK",
+    "desc": "aplikasi digital yang dirancang untuk membantu Guru Bimbingan dan Konseling dalam mengelola, memantau, dan mendokumentasikan seluruh kegiatan layanan BK di sekolah secara lebih efektif, terstruktur, dan efisien.",
     "url": "#",
-    "url_img": "#",
-    "dev": "full-stack",
+    "url_img": "/img/db-bk.webp",
+    "dev": "in progress",
     "stack": ["laravel", "inertia js", "react js"]
   },
   {
     "title": "Landing Page",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ad quasi quod accusamus iste odit dicta deleniti inventore maxime deserunt!",
-    "url": "#",
-    "url_img": "#",
+    "desc": "Portofolio Muammar Maulana, Junior Full Stack Web Developer yang menguasai HTML, CSS, JavaScript, React, Node.js, dan MongoDB. Terbuka untuk peluang remote & freelance.",
+    "url": "https://maulana.my.id/",
+    "url_img": "/img/lp-maul-v1.webp",
     "dev": "front-end",
-    "stack": ["laravel", "inertia js", "react js"]
-  },
-  {
-    "title": "Landing Page",
-    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ad quasi quod accusamus iste odit dicta deleniti inventore maxime deserunt!",
-    "url": "#",
-    "url_img": "#",
-    "dev": "back-end",
-    "stack": ["laravel", "inertia js", "react js"]
+    "stack": ["astro", "html", "tailwind css"]
   }
 ]

@@ -13,8 +13,8 @@ import data from "../data.json";
   <div class="section-content">
     {
       data.map((item, key) => (
-        <di class="card-project">
-          <div class="relative flex items-center justify-between bg-black text-white uppercase p-2 tracking-widest">
+        <di class="card-project hover:-translate-2 ease-initial transition-all">
+          <div class="relative flex items-center justify-between bg-black uppercase p-2 tracking-widest">
             <span class="bg-brutal-orange px-3 font-mono text-lg">
               #0{key + 1}
             </span>
@@ -22,13 +22,22 @@ import data from "../data.json";
               {item.dev}
             </span>
           </div>
-          <img src="#" alt="" class="aspect-video bg-pink-400" />
+          <img
+            src={item.url_img}
+            alt=""
+            class="aspect-video bg-pink-400 border-b-4"
+          />
           <div class="p-4">
             <h2 class="font-bold text-2xl">{item.title}</h2>
-            <p class="leading-relaxed line-clamp-3 mb-4">{item.desc}</p>
+            <p class="leading-relaxed line-clamp-3 mb-4 first-letter:uppercase">
+              {item.desc}
+            </p>
             <div class="w-full border-t-2 border-dashed pt-2 text-black uppercase flex flex-wrap gap-4">
               {item.stack.map((d) => (
-                <span class="bg-brutal-blue shadow-brutal-xs font-semibold tracking-wide py-0.5 px-2 text-center">
+                <span
+                  id="stack"
+                  class="bg-brutal-pink border-2 shadow-brutal-sm font-semibold tracking-wide py-0.5 px-2 text-center"
+                >
                   {d}
                 </span>
               ))}
@@ -38,7 +47,7 @@ import data from "../data.json";
             <span>2025</span>
             <a
               href={item.url}
-              class="px-2 py-0.5 shadow-brutal-xs transition-all ease-linear hover:shadow-none border-2"
+              class="px-2 py-0.5 shadow-brutal-xs bg-brutal-orange transition-all ease-linear hover:shadow-none border-2"
             >
               DEMO
             </a>
