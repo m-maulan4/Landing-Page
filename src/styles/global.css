@@ -1,1 +1,107 @@
 @import "tailwindcss";
+@theme inline {
+  --font-grotesk: "Space Grotesk", sans-serif;
+  --font-mono: "Space Mono", monospace;
+  --color-brutal-yellow: #facc15;
+  --color-brutal-pink: #f472b6;
+  --color-brutal-red: #ef4444;
+  --color-brutal-blue: #3b82f6;
+  --color-brutal-green: #22c55e;
+  --color-brutal-orange: #fb923c;
+  --color-brutal-purple: #a855f7;
+  --color-brutal-cyan: #22d3ee;
+  --shadow-brutal-xs: 4px 4px 0 #000000;
+  --shadow-brutal-sm: 6px 6px 0 #000000;
+  --shadow-brutal-lg: 8px 8px 0 #000000;
+  --shadow-brutal: 10px 10px 0 #000000;
+  --shadow-brutal-xl: 12px 12px 0 #000000;
+  --shadow-brutal-2xl: 14px 14px 0 #000000;
+}
+@layer components {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-grotesk;
+  }
+  p,
+  h1 {
+    @apply leading-none;
+  }
+  .bg-box {
+    background-image:
+      linear-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 0, 0, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  /* ---------- */
+  .section-header {
+    @apply min-h-14 w-full flex flex-col gap-6 py-2 border-b-4;
+    @apply lg:flex-row lg:pb-6 lg:justify-between lg:items-center;
+  }
+
+  .section-header > .left {
+    @apply flex flex-col gap-1;
+  }
+  .section-header > .left > h4 {
+    @apply font-mono font-semibold text-2xl px-2 py-0.5 border w-fit shadow-brutal-sm rotate-3;
+  }
+  .section-header > .left > h3 {
+    @apply text-4xl font-bold;
+  }
+  .section-header > .left > h3 > span {
+    @apply inline-block shadow-brutal-sm -rotate-3 px-2;
+  }
+  .section-header > .right {
+    @apply leading-relaxed border-l-4 pl-2;
+    @apply lg:text-2xl lg:w-1/2 lg:line-clamp-2 lg:font-light;
+  }
+  .section-content {
+    @apply grid lg:grid-cols-3 gap-8 mt-6;
+  }
+  .card-project {
+    @apply border-4 shadow-brutal-lg;
+  }
+  /* ----------- */
+  #project {
+    @apply min-h-dvh p-4;
+  }
+  .btn-cta {
+    @apply flex items-center gap-2 px-2 py-1.5 text-xl lg:text-2xl font-semibold tracking-wider border-4 uppercase shadow-brutal transition-all ease-linear;
+  }
+  .btn-cta-1:hover {
+    @apply shadow-brutal-xs gap-4;
+  }
+  .btn-cta-2:hover {
+    @apply shadow-none gap-4;
+  }
+  .card-profile {
+    @apply relative z-0 w-[80%] lg:w-[60%] bg-white shadow-brutal-lg pb-4 transition-all ease-linear rotate-3 border-4;
+  }
+  .card-profile:hover {
+    @apply rotate-0;
+  }
+  .card-profile > .lubang {
+    @apply absolute z-10 top-0 -translate-y-1/2 translate-x-1/2 right-1/2 bg-brutal-yellow px-10 py-3 border-2 rounded-lg w-12;
+  }
+  .card-profile > .lubang::before {
+    content: "";
+    @apply absolute bottom-0 -translate-y-2 -translate-x-1/2 rounded-lg bg-brutal-cyan h-dvh w-[80%] border-4;
+  }
+  .header-profile {
+    @apply flex items-center justify-center py-4 gap-2 bg-black text-brutal-yellow;
+    @apply font-semibold text-xl uppercase tracking-widest;
+  }
+  .header-profile span {
+    @apply inline-block h-px w-10 bg-brutal-red;
+  }
+  .profile {
+    @apply flex flex-col gap-4 uppercase tracking-wider border-y-2 border-dashed mx-4 mt-12 py-4 mb-4;
+  }
+  .profile > .profile-row {
+    @apply flex items-center justify-between;
+  }
+  .profile > .profile-row span:last-child {
+    @apply w-1/2 text-right;
+  }
+}

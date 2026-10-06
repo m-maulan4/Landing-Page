@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Landing Page",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ad quasi quod accusamus iste odit dicta deleniti inventore maxime deserunt!",
+    "url": "#",
+    "url_img": "#",
+    "dev": "full-stack",
+    "stack": ["laravel", "inertia js", "react js"]
+  },
+  {
+    "title": "Landing Page",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ad quasi quod accusamus iste odit dicta deleniti inventore maxime deserunt!",
+    "url": "#",
+    "url_img": "#",
+    "dev": "front-end",
+    "stack": ["laravel", "inertia js", "react js"]
+  },
+  {
+    "title": "Landing Page",
+    "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ad quasi quod accusamus iste odit dicta deleniti inventore maxime deserunt!",
+    "url": "#",
+    "url_img": "#",
+    "dev": "back-end",
+    "stack": ["laravel", "inertia js", "react js"]
+  }
+]

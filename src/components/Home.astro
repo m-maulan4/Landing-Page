@@ -1,0 +1,205 @@
+---
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Barcode,
+  Dot,
+  ExternalLink,
+  Mail,
+  X,
+} from "@lucide/astro";
+---
+
+<section
+  id="home"
+  class="relative w-full bg-brutal-yellow grid grid-cols-1 lg:grid-cols-2 gap-4"
+>
+  <div
+    class="flex flex-col justify-between h-[calc(100dvh-1rem)] lg:h-dvh p-8 lg:p-12 lg:pb-20"
+  >
+    <div class="flex flex-col">
+      <p class="tracking-wider lg:text-2xl capitalize">
+        <span class="text-brutal-green text-xl">//</span> bimbingan & konseling <span
+          class="text-xs">x</span
+        > full-stack
+      </p>
+      <h1 class="text-5xl lg:text-6xl uppercase font-bold wrap-break-word mt-2">
+        Mendengar untuk <span
+          class="inline-block rotate-2 border-2 px-1 bg-brutal-orange shadow-brutal-lg"
+          >memahami,</span
+        >Membangun untuk <span
+          class="block -rotate-2 border-2 px-1 bg-brutal-green shadow-brutal-lg"
+          >menyelesaikan.</span
+        >
+      </h1>
+    </div>
+    <div class="flex flex-col gap-6 lg:flex-row">
+      <a href="#project" class="btn-cta btn-cta-1 bg-brutal-pink"
+        >karya saya <ArrowRight /></a
+      >
+      <button id="btn-contact" class="btn-cta btn-cta-2"
+        >Hubungi saya <ExternalLink /></button
+      >
+    </div>
+  </div>
+  <div
+    class="flex items-center justify-center h-dvh relative overflow-hidden bg-white bg-box border-l-4"
+  >
+    <div class="card-profile">
+      <div class="lubang"></div>
+      <div
+        class="absolute z-10 shadow-brutal -right-4 -top-2 rotate-20 text-2xl bg-brutal-pink px-4"
+      >
+        HIRE ME
+      </div>
+      <div class="header-profile"><span></span>developer <span></span></div>
+      <div class="content-profile">
+        <h2
+          class="text-2xl font-bold tracking-wider uppercase text-center mt-4"
+        >
+          muammar maulana
+        </h2>
+        <p
+          class="w-fit mx-auto uppercase font-medium text-lg px-2 py-0.5 shadow-brutal-xs bg-brutal-cyan border-2"
+        >
+          junior full-stack
+        </p>
+        <div class="profile">
+          <div class="profile-row">
+            <span>id</span>
+            <span>Jr-webdev-01</span>
+          </div>
+          <div class="profile-row">
+            <span>lokasi</span>
+            <span
+              class="shadow-brutal-sm w-fit rotate-3 px-2 border-2 border-black font-bold bg-brutal-red text-white"
+              >boyolali, id</span
+            >
+          </div>
+          <div class="profile-row">
+            <span>stack</span>
+            <span>laravel · react js · express js</span>
+          </div>
+          <div class="profile-row">
+            <span>status</span>
+            <span
+              class="w-fit shadow-brutal-sm -rotate-3 border-2 border-black bg-brutal-green px-2 text-white font-bold"
+              >siap bekerja</span
+            >
+          </div>
+        </div>
+        <div class="footer-profile">
+          <div class="flex items-center justify-center">
+            <Barcode class="size-16" />
+            <Barcode class="size-16" />
+            <Barcode class="size-16" />
+          </div>
+          <p class="flex items-center justify-center gap-2 -mt-2 font-mono">
+            <Dot />2026<Dot />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    id="drawer"
+    class="hidden fixed inset-0 z-50 overflow-y-auto lg:overflow-hidden bg-brutal-purple p-4 sm:p-6"
+  >
+    <div
+      id="close-drawer"
+      class="absolute right-2 top-2 m-2 shadow-brutal-sm border-2"
+    >
+      <X class="size-8" />
+    </div>
+    <div class="section-header">
+      <div class="left pb-4">
+        <h4 class="bg-brutal-pink border-4">-KONTAK-</h4>
+        <h3>MARI <span class="bg-brutal-orange border-4">TERHUBUNG</span></h3>
+      </div>
+    </div>
+    <div class="mx-auto flex min-h-full max-w-6xl items-center py-8 lg:py-16">
+      <div class="grid w-full gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Email -->
+        <div
+          class="flex flex-col gap-5 border-4 border-black bg-white p-5 shadow-brutal transition-transform hover:-translate-y-1"
+        >
+          <div
+            class="w-fit -rotate-2 border-4 border-black bg-brutal-yellow px-4 py-1 text-xl font-black uppercase tracking-widest shadow-brutal"
+          >
+            Email
+          </div>
+
+          <div class="flex-1">
+            <p
+              class="break-all border-l-4 border-black pl-3 text-lg font-bold sm:text-xl"
+            >
+              muammar676@gmail.com
+            </p>
+          </div>
+
+          <a
+            href="mailto:muammar676@gmail.com"
+            class="btn-cta btn-cta-1 flex w-full items-center justify-center gap-2 bg-brutal-green text-lg"
+          >
+            Kirim Pesan
+            <Mail />
+          </a>
+        </div>
+
+        <!-- Location / Social -->
+        <div
+          class="flex flex-col gap-5 border-4 border-black bg-white p-5 shadow-brutal transition-transform hover:-translate-y-1"
+        >
+          <div
+            class="w-fit -rotate-2 border-4 border-black bg-brutal-pink px-4 py-1 text-xl font-black uppercase tracking-widest shadow-brutal"
+          >
+            IG
+          </div>
+
+          <div class="flex-1">
+            <p
+              class="border-l-4 border-black pl-3 text-lg font-bold sm:text-xl"
+            >
+              @maulana69_
+            </p>
+          </div>
+
+          <a
+            href="https://www.instagram.com/maulana69_"
+            target="_blank"
+            class="btn-cta btn-cta-1 flex w-full items-center justify-center gap-2 bg-brutal-green text-lg"
+          >
+            Lihat Profil
+            <ArrowUpRight />
+          </a>
+        </div>
+        <div
+          class="flex flex-col gap-5 border-4 border-black bg-white p-5 shadow-brutal transition-transform hover:-translate-y-1"
+        >
+          <div
+            class="w-fit -rotate-2 border-4 border-black bg-brutal-blue px-4 py-1 text-xl font-black uppercase tracking-widest shadow-brutal"
+          >
+            github
+          </div>
+
+          <div class="flex-1">
+            <p
+              class="border-l-4 border-black pl-3 text-lg font-bold sm:text-xl"
+            >
+              m-maulan4
+            </p>
+          </div>
+
+          <a
+            href="https://github.com/m-maulan4"
+            target="_blank"
+            class="btn-cta btn-cta-1 flex w-full items-center justify-center gap-2 bg-brutal-green text-lg"
+          >
+            Lihat Profil
+            <ArrowUpRight />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
