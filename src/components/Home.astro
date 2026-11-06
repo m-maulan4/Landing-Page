@@ -1,13 +1,14 @@
 ---
 import {
   ArrowRight,
-  ArrowUpRight,
   Barcode,
   Dot,
   ExternalLink,
-  Mail,
   X,
 } from "@lucide/astro";
+import emailIcon from "../assets/email.svg";
+import instagramIcon from "../assets/instagram.svg";
+import githubIcon from "../assets/github.svg";
 ---
 
 <section
@@ -23,7 +24,7 @@ import {
           class="text-xs">x</span
         > full-stack
       </p>
-      <h1 class="text-5xl lg:text-6xl uppercase font-bold wrap-break-word mt-2">
+      <h1 class="text-5xl lg:text-6xl uppercase font-bold break-words mt-2">
         Mendengar untuk <span
           class="inline-block rotate-2 border-2 px-1 bg-brutal-orange shadow-brutal-lg"
           >memahami,</span
@@ -37,7 +38,11 @@ import {
       <a href="#project" class="btn-cta btn-cta-1 bg-brutal-pink"
         >karya saya <ArrowRight /></a
       >
-      <button id="btn-contact" class="btn-cta btn-cta-2"
+      <button
+        id="btn-contact"
+        class="btn-cta btn-cta-2"
+        aria-expanded="false"
+        aria-controls="drawer"
         >Hubungi saya <ExternalLink /></button
       >
     </div>
@@ -105,12 +110,14 @@ import {
     id="drawer"
     class="hidden fixed inset-0 z-50 overflow-y-auto lg:overflow-hidden bg-brutal-purple p-4 lg:p-10 sm:p-6"
   >
-    <div
+    <button
       id="close-drawer"
+      type="button"
+      aria-label="Tutup"
       class="absolute right-2 top-2 m-2 shadow-brutal-sm border-2"
     >
       <X class="size-8" />
-    </div>
+    </button>
     <div class="section-header">
       <div class="left pb-4">
         <h4 class="bg-brutal-pink border-4">-KONTAK-</h4>
@@ -142,7 +149,7 @@ import {
             class="btn-cta btn-cta-1 flex w-full items-center justify-center gap-2 bg-brutal-green text-lg"
           >
             Kirim Pesan
-            <Mail />
+            <img src={emailIcon.src} alt="" class="size-6" />
           </a>
         </div>
 
@@ -167,10 +174,11 @@ import {
           <a
             href="https://www.instagram.com/maulana69_"
             target="_blank"
+            rel="noopener noreferrer"
             class="btn-cta btn-cta-1 flex w-full items-center justify-center gap-2 bg-brutal-green text-lg"
           >
             Lihat Profil
-            <ArrowUpRight />
+            <img src={instagramIcon.src} alt="" class="size-6" />
           </a>
         </div>
         <div
@@ -193,10 +201,11 @@ import {
           <a
             href="https://github.com/m-maulan4"
             target="_blank"
+            rel="noopener noreferrer"
             class="btn-cta btn-cta-1 flex w-full items-center justify-center gap-2 bg-brutal-green text-lg"
           >
             Lihat Profil
-            <ArrowUpRight />
+            <img src={githubIcon.src} alt="" class="size-6" />
           </a>
         </div>
       </div>

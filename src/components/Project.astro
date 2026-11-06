@@ -1,5 +1,22 @@
 ---
-import data from "../data.json";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import dbBk from "../assets/projects/db-bk.webp";
+import servmon from "../assets/projects/servmon.webp";
+import lpMaul from "../assets/projects/lp-maul-v1.webp";
+import type Data from "../data.json";
+
+interface Props {
+  data: typeof Data;
+}
+
+const { data } = Astro.props;
+
+const IMAGES: Record<string, ImageMetadata> = {
+  "db-bk": dbBk,
+  servmon,
+  "lp-maul-v1": lpMaul,
+};
 ---
 
 <section id="project" class="border-t-4">
@@ -13,7 +30,7 @@ import data from "../data.json";
   <div class="section-content">
     {
       data.map((item, key) => (
-        <di class="card-project hover:-translate-2 ease-initial transition-all">
+        <div class="card-project hover:-translate-y-2 ease-linear transition-all">
           <div class="relative flex items-center justify-between bg-black uppercase p-2 tracking-widest">
             <span class="bg-brutal-orange px-3 font-mono text-lg">
               #0{key + 1}
@@ -22,9 +39,9 @@ import data from "../data.json";
               {item.dev}
             </span>
           </div>
-          <img
-            src={item.url_img}
-            alt=""
+          <Image
+            src={IMAGES[item.url_img]}
+            alt={item.title}
             class="aspect-video bg-pink-400 border-b-4"
           />
           <div class="p-4">
@@ -35,7 +52,6 @@ import data from "../data.json";
             <div class="w-full border-t-2 border-dashed pt-2 text-black uppercase flex flex-wrap gap-4">
               {item.stack.map((d) => (
                 <span
-                  id="stack"
                   class="bg-brutal-pink border-2 shadow-brutal-sm font-semibold tracking-wide py-0.5 px-2 text-center"
                 >
                   {d}
@@ -44,7 +60,7 @@ import data from "../data.json";
             </div>
           </div>
           <div class="p-4 flex items-center justify-between flex-wrap border-t-4 font-medium">
-            <span>2025</span>
+            <span>{item.date}</span>
             <a
               href={item.url}
               class="px-2 py-0.5 shadow-brutal-xs bg-brutal-orange transition-all ease-linear hover:shadow-none border-2"
@@ -52,7 +68,7 @@ import data from "../data.json";
               DEMO
             </a>
           </div>
-        </di>
+        </div>
       ))
     }
   </div>

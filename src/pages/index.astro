@@ -6,7 +6,7 @@ import Data from "../data.json";
 import SEO from "../components/SEO.astro";
 ---
 
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -21,7 +21,7 @@ import SEO from "../components/SEO.astro";
   </head>
   <body>
     <Home />
-    {Data.length > 0 && <Project />}
+    <Project data={Data} />
     <script>
       import "../scripts/script";
     </script>

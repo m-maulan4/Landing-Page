@@ -3,16 +3,27 @@
     "title": "Dashboard Guru BK",
     "desc": "aplikasi digital yang dirancang untuk membantu Guru Bimbingan dan Konseling dalam mengelola, memantau, dan mendokumentasikan seluruh kegiatan layanan BK di sekolah secara lebih efektif, terstruktur, dan efisien.",
     "url": "#",
-    "url_img": "/img/db-bk.webp",
+    "url_img": "db-bk",
     "dev": "in progress",
-    "stack": ["laravel", "inertia js", "react js"]
+    "stack": ["laravel", "inertia js", "react js"],
+    "date": "2026"
+  },
+  {
+    "title": "Live Server Monitoring",
+    "desc": "Live Server Monitoring Dashboard adalah aplikasi pemantauan kinerja server secara real-time berbasis antarmuka web modern dengan tema gelap (dark mode). Aplikasi ini memanfaatkan protokol komunikasi Server-Sent Events (SSE) untuk menyajikan statistik vital sistem secara presisi tanpa perlu menyegarkan (refresh) halaman web.",
+    "url": "https://health.maulana.my.id/",
+    "url_img": "servmon",
+    "dev": "BE+FE",
+    "stack": ["Go", "html", "tailwind css"],
+    "date": "2026"
   },
   {
     "title": "Landing Page",
     "desc": "Portofolio Muammar Maulana, Junior Full Stack Web Developer yang menguasai HTML, CSS, JavaScript, React, Node.js, dan MongoDB. Terbuka untuk peluang remote & freelance.",
     "url": "https://maulana.my.id/",
-    "url_img": "/img/lp-maul-v1.webp",
+    "url_img": "lp-maul-v1",
     "dev": "front-end",
-    "stack": ["astro", "html", "tailwind css"]
+    "stack": ["astro", "html", "tailwind css"],
+    "date": "2026"
   }
 ]

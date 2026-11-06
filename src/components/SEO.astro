@@ -1,3 +1,8 @@
+---
+const site = Astro.site ?? new URL("https://maulana.my.id/");
+const ogImage = new URL("img/og-preview.webp", site).href;
+---
+
 <title>Muammar Maulana | Junior Full Stack Web Developer</title>
 <meta
   name="description"
@@ -9,7 +14,7 @@
 />
 <meta name="author" content="Muammar Maulana" />
 <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://maulana.my.id/" />
+<link rel="canonical" href={site.href} />
 
 <!-- ===== OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ===== -->
 <meta property="og:type" content="website" />
@@ -21,9 +26,16 @@
   property="og:description"
   content="Junior Full Stack Developer spesialis Laravel, React, & Node.js. Lihat portofolio dan proyek saya."
 />
-<meta property="og:url" content="https://maulana.my.id/" />
-<meta property="og:image" content="https://maulana.my.id/img/og-preview.png" />
+<meta property="og:url" content={site.href} />
+<meta property="og:image" content={ogImage} />
 <meta property="og:locale" content="id_ID" />
+<meta property="og:site_name" content="Muammar Maulana" />
+
+<!-- ===== TWITTER (X) ===== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Muammar Maulana | Junior Full Stack Web Developer" />
+<meta name="twitter:description" content="Junior Full Stack Developer spesialis Laravel, React, & Node.js. Lihat portofolio dan proyek saya." />
+<meta name="twitter:image" content={ogImage} />
 
 <!-- ===== JSON-LD STRUCTURED DATA (SEO KILLER!) ===== -->
 <script type="application/ld+json">
