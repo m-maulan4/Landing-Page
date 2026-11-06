@@ -1,11 +1,11 @@
 # build output
-dist/
+/dist
 # generated types
-.astro/
-.vscode/
-
+/.astro
+/.vscode
+/.AGENTS.md
 # dependencies
-node_modules/
+/node_modules
 
 # logs
 npm-debug.log*
