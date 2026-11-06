@@ -1,11 +1,5 @@
 ---
-import {
-  ArrowRight,
-  Barcode,
-  Dot,
-  ExternalLink,
-  X,
-} from "@lucide/astro";
+import { ArrowRight, Barcode, Dot, ExternalLink, X } from "@lucide/astro";
 import emailIcon from "../assets/email.svg";
 import instagramIcon from "../assets/instagram.svg";
 import githubIcon from "../assets/github.svg";
@@ -24,7 +18,7 @@ import githubIcon from "../assets/github.svg";
           class="text-xs">x</span
         > full-stack
       </p>
-      <h1 class="text-5xl lg:text-6xl uppercase font-bold break-words mt-2">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl uppercase font-bold wrap-break-word mt-2">
         Mendengar untuk <span
           class="inline-block rotate-2 border-2 px-1 bg-brutal-orange shadow-brutal-lg"
           >memahami,</span
@@ -42,8 +36,7 @@ import githubIcon from "../assets/github.svg";
         id="btn-contact"
         class="btn-cta btn-cta-2"
         aria-expanded="false"
-        aria-controls="drawer"
-        >Hubungi saya <ExternalLink /></button
+        aria-controls="drawer">Hubungi saya <ExternalLink /></button
       >
     </div>
   </div>
@@ -124,7 +117,7 @@ import githubIcon from "../assets/github.svg";
         <h3>MARI <span class="bg-brutal-orange border-4">TERHUBUNG</span></h3>
       </div>
     </div>
-    <div class="mx-auto flex min-h-full max-w-6xl items-center py-8 lg:py-16">
+    <div class="mx-auto flex min-h-full max-w-6xl items-start lg:items-center py-8 lg:py-16">
       <div class="grid w-full gap-6 md:grid-cols-2 lg:grid-cols-3">
         <!-- Email -->
         <div

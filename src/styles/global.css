@@ -57,7 +57,7 @@
     @apply lg:text-2xl lg:w-1/2 lg:line-clamp-2 lg:font-light;
   }
   .section-content {
-    @apply grid lg:grid-cols-3 gap-8 mt-6;
+    @apply grid gap-8 mt-6 sm:grid-cols-2 lg:grid-cols-3;
   }
   .card-project {
     @apply border-4 shadow-brutal-lg;
